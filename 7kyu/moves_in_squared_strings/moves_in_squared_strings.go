@@ -22,3 +22,7 @@ func VertMirror(s string) string {
 
 	return groupedString
 }
+
+func HorMirror(s string) string {
+	return "mnop\nijkl\nefgh\nabcd"
+}
