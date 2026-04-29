@@ -24,5 +24,16 @@ func VertMirror(s string) string {
 }
 
 func HorMirror(s string) string {
-	return "mnop\nijkl\nefgh\nabcd"
+	separatedString := strings.Split(s, "\n")
+	groupedString := ""
+
+	for i := len(separatedString) - 1; i >= 0; i-- {
+		groupedString += string(separatedString[i])
+
+		if i != 0 {
+			groupedString += "\n"
+		}
+	}
+
+	return groupedString
 }
