@@ -16,6 +16,11 @@ func TestVertMirror(t *testing.T) {
 			Input: "abcd\nefgh\nijkl\nmnop",
 			Want:  "dcba\nhgfe\nlkji\nponm",
 		},
+		{
+			Name:  "second vertical mirror test case",
+			Input: "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu",
+			Want:  "QHdgSh\noaMDnH\nXxNNlC\nHxxvRi\nAvVTqb\nuRySvw",
+		}
 	}
 
 	for _, cc := range cases {
