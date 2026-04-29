@@ -33,3 +33,26 @@ func TestVertMirror(t *testing.T) {
 		})
 	}
 }
+
+func TestHorMirror(t *testing.T) {
+	cases := []struct {
+		Name        string
+		Input, Want string
+	}{
+		{
+			Name:  "first horizontal mirror test case",
+			Input: "abcd\nefgh\nijkl\nmnop",
+			Want:  "mnop\nijkl\nefgh\nabcd",
+		},
+	}
+
+	for _, cc := range cases {
+		t.Run(cc.Name, func(t *testing.T) {
+			got := HorMirror(cc.Input)
+
+			if got != cc.Want {
+				t.Errorf("got %s want %s", got, cc.Want)
+			}
+		})
+	}
+}
