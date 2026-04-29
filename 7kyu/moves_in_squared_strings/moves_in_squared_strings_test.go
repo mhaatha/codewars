@@ -44,6 +44,11 @@ func TestHorMirror(t *testing.T) {
 			Input: "abcd\nefgh\nijkl\nmnop",
 			Want:  "mnop\nijkl\nefgh\nabcd",
 		},
+		{
+			Name:  "second horizontal mirror test case",
+			Input: "lVHt\nJVhv\nCSbg\nyeCt",
+			Want:  "yeCt\nCSbg\nJVhv\nlVHt",
+		},
 	}
 
 	for _, cc := range cases {
