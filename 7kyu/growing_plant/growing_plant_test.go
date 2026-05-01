@@ -14,6 +14,27 @@ func TestGrowingPlant(t *testing.T) {
 			DesiredHeight: 910,
 			Want:          10,
 		},
+		{
+			Name:          "it should return 1",
+			UpSpeed:       10,
+			DownSpeed:     9,
+			DesiredHeight: 4,
+			Want:          1,
+		},
+		{
+			Name:          "it should return 1",
+			UpSpeed:       5,
+			DownSpeed:     2,
+			DesiredHeight: 5,
+			Want:          1,
+		},
+		{
+			Name:          "it should return 2",
+			UpSpeed:       5,
+			DownSpeed:     2,
+			DesiredHeight: 6,
+			Want:          2,
+		},
 	}
 
 	for _, c := range cases {
