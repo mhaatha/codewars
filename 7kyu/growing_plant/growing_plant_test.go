@@ -9,8 +9,8 @@ func TestGrowingPlant(t *testing.T) {
 	}{
 		{
 			Name:          "it should return 10",
-			UpSpeed:       10,
-			DownSpeed:     1,
+			UpSpeed:       100,
+			DownSpeed:     10,
 			DesiredHeight: 910,
 			Want:          10,
 		},
