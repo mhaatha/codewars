@@ -39,6 +39,48 @@ func TestOrderedCount(t *testing.T) {
 				},
 			},
 		},
+		{
+			Name:  "it should return a slice of Tuple where Char: 'C' Count: 1, Char: 'o' Count: 1, Char: 'd' Count: 1, Char: 'e' Count: 1, Char: ' ' Count: 1, Char: 'W' Count: 1, Char: 'a' Count: 1, Char: 'r' Count: 1, and Char: 's' Count: 1",
+			Input: "Code Wars",
+			Want: []Tuple{
+				{
+					Char:  'C',
+					Count: 1,
+				},
+				{
+					Char:  'o',
+					Count: 1,
+				},
+				{
+					Char:  'd',
+					Count: 1,
+				},
+				{
+					Char:  'e',
+					Count: 1,
+				},
+				{
+					Char:  ' ',
+					Count: 1,
+				},
+				{
+					Char:  'W',
+					Count: 1,
+				},
+				{
+					Char:  'a',
+					Count: 1,
+				},
+				{
+					Char:  'r',
+					Count: 1,
+				},
+				{
+					Char:  's',
+					Count: 1,
+				},
+			},
+		},
 	}
 
 	for _, c := range cases {
