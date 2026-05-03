@@ -8,26 +8,23 @@ type Tuple struct {
 }
 
 func OrderedCount(text string) []Tuple {
-	return []Tuple{
-		{
-			Char:  'a',
-			Count: 5,
-		},
-		{
-			Char:  'b',
-			Count: 2,
-		},
-		{
-			Char:  'r',
-			Count: 2,
-		},
-		{
-			Char:  'c',
-			Count: 1,
-		},
-		{
-			Char:  'd',
-			Count: 1,
-		},
+	res := []Tuple{}
+	charOccured := make(map[rune]int)
+
+	for _, char := range text {
+		if charOccured[char] == 0 {
+			charOccured[char] = 1
+		} else {
+			charOccured[char]++
+		}
 	}
+
+	for key, value := range charOccured {
+		res = append(res, Tuple{
+			Char:  key,
+			Count: value,
+		})
+	}
+
+	return res
 }
