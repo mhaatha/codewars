@@ -10,20 +10,30 @@ type Tuple struct {
 func OrderedCount(text string) []Tuple {
 	res := []Tuple{}
 	charOccured := make(map[rune]int)
+	charPosition := make(map[rune]int)
+	positionCounter := 0
 
 	for _, char := range text {
 		if charOccured[char] == 0 {
+			positionCounter++
 			charOccured[char] = 1
+			charPosition[char] = positionCounter
 		} else {
 			charOccured[char]++
 		}
 	}
 
-	for key, value := range charOccured {
-		res = append(res, Tuple{
-			Char:  key,
-			Count: value,
-		})
+	for key, index := range charPosition {
+		for char, value := range charOccured {
+			if key == char {
+				res = append(res, Tuple{})
+				copy(res[index+1:], res[index:])
+				res[index] = Tuple{
+					Char:  char,
+					Count: value,
+				}
+			}
+		}
 	}
 
 	return res
