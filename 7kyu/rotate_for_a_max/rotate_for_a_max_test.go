@@ -7,7 +7,7 @@ import "testing"
 func TestMaxRot(t *testing.T) {
 	cases := []struct {
 		Name        string
-		Input, Want int
+		Input, Want int64
 	}{
 		{
 			Name:  "it should return 68957",
